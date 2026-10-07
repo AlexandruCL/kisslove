@@ -1,0 +1,23 @@
+{
+  "powers": [
+    {
+      "name": "cloudscape-design-frontend",
+      "description": "Custom power from https://github.com/praveenc/kiro-powers/tree/main/cloudscape-design-frontend",
+      "source": {
+        "type": "repo",
+        "repositoryCloneUrl": "https://github.com/praveenc/kiro-powers.git",
+        "pathInRepo": "cloudscape-design-frontend",
+        "repositoryBranch": "main"
+      },
+      "repositoryUrl": "https://github.com/praveenc/kiro-powers/tree/main/cloudscape-design-frontend"
+    },
+    {
+      "name": "kiro-protocols",
+      "description": "Custom power from C:\\Users\\alexc\\.kiro\\powers\\kiro-protocols",
+      "source": {
+        "type": "local",
+        "path": "C:\\Users\\alexc\\.kiro\\powers\\kiro-protocols"
+      }
+    }
+  ]
+}

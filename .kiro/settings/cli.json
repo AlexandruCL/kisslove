@@ -1,0 +1,4 @@
+{
+  "chat.enableAutoAgentUpgrade": true,
+  "chat.sessionDashboard.indexResponses": true
+}

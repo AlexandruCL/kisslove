@@ -1,0 +1,33 @@
+# kisslove — portable Kiro setup bundle
+# This repo intentionally contains ONLY portable config. The following are
+# machine-specific, transient, or sensitive and must never be committed.
+
+# Transient / machine-specific Kiro runtime state (not part of the bundle)
+.kiro/sessions/
+.kiro/session-index/
+.kiro/logs/
+.kiro/workspace-roots/
+.kiro/crew/
+.kiro/crew-auth-staging/
+.kiro/extensions/
+.kiro/.trust-migration.json
+.kiro/argv.json
+
+# Lock / state files that should not travel
+.kiro/**/*.lock
+.kiro/**/*.bak
+.kiro/settings/*.lock
+.kiro/settings/feed_state.json
+.kiro/settings/survey_state.json
+.kiro/settings/session-response-indexing.json
+
+# Per-workspace graphify output (rebuilt with /graphify .)
+graphify-out/
+
+# Secrets — never commit
+*.key
+*.pem
+.local_secret
+token_signing.key
+*.env
+.env

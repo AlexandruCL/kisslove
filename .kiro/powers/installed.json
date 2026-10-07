@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "installedPowers": [
+    {
+      "name": "cloudscape-design-frontend",
+      "registryId": "user-added"
+    },
+    {
+      "name": "kiro-protocols",
+      "registryId": "user-added"
+    }
+  ],
+  "dismissedAutoInstalls": []
+}

@@ -1,0 +1,208 @@
+{
+  "version": 3,
+  "skills": {
+    "agent-code-discipline": {
+      "source": "praveenc/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/praveenc/skills.git",
+      "skillPath": "agent-code-discipline/SKILL.md",
+      "skillFolderHash": "c829f053486738670f077dfbfeb82e22ac697f76",
+      "installedAt": "2026-09-11T19:36:50.658Z",
+      "updatedAt": "2026-09-11T19:36:50.658Z"
+    },
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/skills.git",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "skillFolderHash": "76a98a285cb0434f3d39e1a873823556330e398b",
+      "installedAt": "2026-09-11T19:37:02.415Z",
+      "updatedAt": "2026-09-11T19:37:02.415Z"
+    },
+    "workspace-memory": {
+      "source": "local",
+      "sourceType": "local",
+      "skillPath": "workspace-memory/SKILL.md",
+      "installedAt": "2026-09-22T00:00:00Z",
+      "updatedAt": "2026-09-22T00:00:00Z"
+    },
+    "error-handling-patterns": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/wshobson/agents.git",
+      "skillPath": "plugins/developer-essentials/skills/error-handling-patterns/SKILL.md",
+      "installedAt": "2026-10-07T09:58:00.388Z",
+      "updatedAt": "2026-10-07T09:58:00.388Z"
+    },
+    "subagent-driven-development": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/subagent-driven-development/SKILL.md",
+      "installedAt": "2026-10-07T09:58:00.388Z",
+      "updatedAt": "2026-10-07T09:58:00.388Z"
+    },
+    "architecture-decision-records": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/wshobson/agents.git",
+      "skillPath": "plugins/documentation-generation/skills/architecture-decision-records/SKILL.md",
+      "installedAt": "2026-10-07T09:58:00.388Z",
+      "updatedAt": "2026-10-07T09:58:00.388Z"
+    },
+    "test-driven-development": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/test-driven-development/SKILL.md",
+      "installedAt": "2026-10-07T09:58:00.388Z",
+      "updatedAt": "2026-10-07T09:58:00.388Z"
+    },
+    "api-design-principles": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/wshobson/agents.git",
+      "skillPath": "plugins/backend-development/skills/api-design-principles/SKILL.md",
+      "installedAt": "2026-10-07T09:58:00.388Z",
+      "updatedAt": "2026-10-07T09:58:00.388Z"
+    },
+    "executing-plans": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/executing-plans/SKILL.md",
+      "installedAt": "2026-10-07T09:58:00.388Z",
+      "updatedAt": "2026-10-07T09:58:00.388Z"
+    },
+    "systematic-debugging": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/systematic-debugging/SKILL.md",
+      "installedAt": "2026-10-07T09:58:00.388Z",
+      "updatedAt": "2026-10-07T09:58:00.388Z"
+    },
+    "requesting-code-review": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/requesting-code-review/SKILL.md",
+      "installedAt": "2026-10-07T09:58:00.388Z",
+      "updatedAt": "2026-10-07T09:58:00.388Z"
+    },
+    "brainstorming": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/brainstorming/SKILL.md",
+      "installedAt": "2026-10-07T09:58:00.388Z",
+      "updatedAt": "2026-10-07T09:58:00.388Z"
+    },
+    "verification-before-completion": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/verification-before-completion/SKILL.md",
+      "installedAt": "2026-10-07T09:58:00.388Z",
+      "updatedAt": "2026-10-07T09:58:00.388Z"
+    },
+    "using-git-worktrees": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/using-git-worktrees/SKILL.md",
+      "installedAt": "2026-10-07T09:58:00.388Z",
+      "updatedAt": "2026-10-07T09:58:00.388Z"
+    },
+    "debugging-strategies": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/wshobson/agents.git",
+      "skillPath": "plugins/developer-essentials/skills/debugging-strategies/SKILL.md",
+      "installedAt": "2026-10-07T09:58:00.388Z",
+      "updatedAt": "2026-10-07T09:58:00.388Z"
+    },
+    "code-review-excellence": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/wshobson/agents.git",
+      "skillPath": "plugins/developer-essentials/skills/code-review-excellence/SKILL.md",
+      "installedAt": "2026-10-07T09:58:00.388Z",
+      "updatedAt": "2026-10-07T09:58:00.388Z"
+    },
+    "writing-plans": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/writing-plans/SKILL.md",
+      "installedAt": "2026-10-07T09:58:00.388Z",
+      "updatedAt": "2026-10-07T09:58:00.388Z"
+    },
+    "domain-modeling": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mattpocock/skills.git",
+      "skillPath": "skills/engineering/domain-modeling/SKILL.md",
+      "installedAt": "2026-10-07T09:58:00.388Z",
+      "updatedAt": "2026-10-07T09:58:00.388Z"
+    },
+    "receiving-code-review": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/receiving-code-review/SKILL.md",
+      "installedAt": "2026-10-07T09:58:00.388Z",
+      "updatedAt": "2026-10-07T09:58:00.388Z"
+    },
+    "codebase-design": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mattpocock/skills.git",
+      "skillPath": "skills/engineering/codebase-design/SKILL.md",
+      "installedAt": "2026-10-07T09:58:00.388Z",
+      "updatedAt": "2026-10-07T09:58:00.388Z"
+    },
+    "secrets-management": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/wshobson/agents.git",
+      "skillPath": "plugins/cicd-automation/skills/secrets-management/SKILL.md",
+      "installedAt": "2026-10-07T09:58:00.388Z",
+      "updatedAt": "2026-10-07T09:58:00.388Z"
+    },
+    "research": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mattpocock/skills.git",
+      "skillPath": "skills/engineering/research/SKILL.md",
+      "installedAt": "2026-10-07T09:58:00.388Z",
+      "updatedAt": "2026-10-07T09:58:00.388Z"
+    },
+    "graphify": {
+      "source": "Graphify-Labs/graphify",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/Graphify-Labs/graphify.git",
+      "skillPath": "graphify/SKILL.md",
+      "installedVia": "graphify kiro install (graphifyy CLI 0.9.79)",
+      "installedAt": "2026-10-07T10:14:24.537Z",
+      "updatedAt": "2026-10-07T10:14:24.537Z"
+    }
+  },
+  "dismissed": {
+    "findSkillsPrompt": true
+  },
+  "lastSelectedAgents": [
+    "amp",
+    "cline",
+    "codex",
+    "cursor",
+    "droid",
+    "gemini-cli",
+    "github-copilot",
+    "kilo",
+    "kimi-code-cli",
+    "opencode",
+    "warp",
+    "zed"
+  ]
+}

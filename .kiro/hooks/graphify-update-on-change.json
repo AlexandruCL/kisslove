@@ -1,0 +1,16 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Graphify: update graph on source change",
+      "trigger": "PostFileSave",
+      "description": "After saving a source-code file, incrementally refresh the graphify knowledge graph (LLM-free) — but only if a graph already exists in the workspace. No-ops when nothing changed or no graph is present, so it never builds from scratch unprompted.",
+      "matcher": "\\.(py|ts|tsx|js|jsx|go|rs|java|cpp|cc|cxx|hpp|h|c|rb|swift|kt|kts|cs|scala|php|lua)$",
+      "action": {
+        "type": "command",
+        "command": "pwsh -NoProfile -Command \"if (Test-Path 'graphify-out/graph.json') { python -m graphify update . 2>&1 | Select-Object -Last 3 } else { Write-Output '[graphify hook] no graph.json in workspace - skipping (run /graphify . to build first)' }\"",
+        "timeout": 120
+      }
+    }
+  ]
+}

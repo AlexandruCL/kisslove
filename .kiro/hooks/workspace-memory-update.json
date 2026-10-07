@@ -1,0 +1,14 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Update Workspace Memory",
+      "trigger": "Stop",
+      "description": "After each agent turn, update the workspace MEMORY.md using the workspace-memory skill — but only if this turn actually changed the project (structure, architecture, decisions, data models, contracts, or conventions). Skip on pure Q&A, reads, or trivial no-structural-impact edits.",
+      "action": {
+        "type": "agent",
+        "prompt": "Review what changed in the turn that just completed. If this turn modified the project's structure, architecture, key decisions, data models, API contracts, build/run/test commands, or conventions, then update MEMORY.md at the workspace root using the workspace-memory skill: read the existing MEMORY.md (create it from the skill's skeleton if missing), update the affected sections in place, append to Key Decisions only for significant new decisions, and refresh the Last updated date. Keep it concise (under ~200 lines) and update in place — do not append a per-edit changelog. If the turn did not change the project (pure questions, explanations, reads, or trivial edits with no structural impact), do nothing and make no file changes."
+      }
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "skill": "agent-code-discipline",
+  "version": "1.2.0",
+  "cases": [
+    {
+      "id": "think-before-coding-ambiguous",
+      "principle": "Think Before Coding",
+      "reference": "references/examples-generic.md",
+      "prompt": "Add a feature to export user data",
+      "expect": "Agent asks clarifying questions about scope, format, delivery mechanism, and fields before writing code",
+      "fail_if": "Agent produces a full implementation without surfacing assumptions",
+      "baseline": "Without skill, agent silently assumes JSON format, all users, file export to hardcoded path, and produces 30-50 lines of implementation immediately"
+    },
+    {
+      "id": "think-before-coding-multiple-interpretations",
+      "principle": "Think Before Coding",
+      "reference": "references/examples-generic.md",
+      "prompt": "Make the search faster",
+      "expect": "Agent presents multiple interpretations (response time, throughput, perceived speed) and asks which matters",
+      "fail_if": "Agent picks one interpretation silently and implements 200+ lines of optimization",
+      "baseline": "Without skill, agent picks one interpretation (usually caching + async) and produces a full implementation with lru_cache, connection pooling, and index suggestions"
+    },
+    {
+      "id": "simplicity-first-single-function",
+      "principle": "Simplicity First",
+      "reference": "references/examples-generic.md",
+      "prompt": "Write a function to calculate a percentage discount on an order amount",
+      "expect": "Agent produces a single function, under 10 lines, no classes or abstractions",
+      "fail_if": "Agent produces Strategy pattern, ABC, dataclass config, or more than 20 lines",
+      "baseline": "Without skill, agent produces 40-80 lines with DiscountStrategy ABC, multiple subclasses, a config dataclass, and a DiscountCalculator class"
+    },
+    {
+      "id": "simplicity-first-cdk-lambda",
+      "principle": "Simplicity First",
+      "reference": "references/examples-aws-cdk.md",
+      "prompt": "Create a CDK stack with a Lambda behind API Gateway",
+      "expect": "Agent uses LambdaRestApi (one-liner integration), under 20 lines of construct code, no custom IAM roles or X-Ray",
+      "fail_if": "Agent adds CORS, throttling, custom roles, reserved concurrency, log retention, or creates a reusable Construct class",
+      "baseline": "Without skill, agent creates a custom Construct with 10+ optional props, custom IAM role, X-Ray tracing, CORS, throttling config, and deploy stage options (60-80 lines)"
+    },
+    {
+      "id": "surgical-changes-bug-fix",
+      "principle": "Surgical Changes",
+      "reference": "references/examples-generic.md",
+      "prompt": "Fix the bug where empty emails crash the validator. Here's the code:\n\ndef validate_user(user_data):\n    # Check email format\n    if not user_data.get('email'):\n        raise ValueError('Email required')\n    \n    # Basic email validation\n    if '@' not in user_data['email']:\n        raise ValueError('Invalid email')\n    \n    # Check username\n    if not user_data.get('username'):\n        raise ValueError('Username required')\n    \n    return True",
+      "expect": "Agent changes only the email-related lines to handle empty/whitespace strings. Preserves existing style, no docstring added, no username validation changes",
+      "fail_if": "Agent adds type hints, docstring, improves email regex, adds username validation, or changes quote style",
+      "baseline": "Without skill, agent rewrites the entire function: adds docstring, type hints, improves email regex with '.' check, adds username length/alphanumeric validation, changes comments, changes quote style"
+    },
+    {
+      "id": "goal-driven-vague-request",
+      "principle": "Goal-Driven Execution",
+      "reference": "references/examples-generic.md",
+      "prompt": "Fix the authentication system",
+      "expect": "Agent asks for specific issue, then proposes verifiable steps with success criteria (test fails -> test passes -> no regression)",
+      "fail_if": "Agent says 'I will review and improve' without defining specific success criteria, or starts making changes immediately",
+      "baseline": "Without skill, agent says 'I will review the code, identify issues, and make improvements' then starts modifying auth code without reproducing a bug or defining what 'fixed' means"
+    },
+    {
+      "id": "negative-trivial-task",
+      "principle": "Gotcha: Don't over-apply",
+      "reference": "SKILL.md (Gotchas section)",
+      "prompt": "Rename the variable 'x' to 'count' in this function:\n\ndef summarize(items):\n    x = len(items)\n    return f'{x} items'",
+      "expect": "Agent just does the rename without asking clarifying questions - this is trivial and unambiguous",
+      "fail_if": "Agent asks clarifying questions about naming conventions or scope before performing a simple rename",
+      "baseline": "Without skill, agent performs the rename directly (correct behavior - this is a case where no skill intervention is needed)"
+    },
+    {
+      "id": "simplicity-bedrock-invoke",
+      "principle": "Simplicity First",
+      "reference": "references/examples-aws-bedrock.md",
+      "prompt": "Write a Python function to call Claude on Bedrock to summarize a document",
+      "expect": "Agent produces a single function under 15 lines using invoke_model directly, no class hierarchy",
+      "fail_if": "Agent creates a class with retry logic, token tracking, config dataclass, input validation, or exponential backoff",
+      "baseline": "Without skill, agent produces 80+ lines with a BedrockSummarizer class, ModelConfig dataclass, retry logic with exponential backoff, token tracking, input validation, and document truncation"
+    },
+    {
+      "id": "simplicity-cdk-dynamodb",
+      "principle": "Simplicity First",
+      "reference": "references/examples-aws-cdk.md",
+      "prompt": "Create a CDK stack with a DynamoDB table for storing user sessions",
+      "expect": "Agent asks about access patterns and environment before implementing. Produces on-demand table with partition key and TTL, under 15 lines of construct code",
+      "fail_if": "Agent adds provisioned capacity with auto-scaling, GSIs, DynamoDB Streams, CloudWatch alarms, SNS topic, or point-in-time recovery without asking",
+      "baseline": "Without skill, agent assumes provisioned capacity, adds auto-scaling, GSI on createdAt, DynamoDB Streams, CloudWatch throttle alarm with SNS, and RETAIN removal policy (60+ lines)"
+    },
+    {
+      "id": "simplicity-bedrock-agent",
+      "principle": "Simplicity First",
+      "reference": "references/examples-aws-bedrock.md",
+      "prompt": "Create a CDK stack that deploys a Bedrock Agent with a knowledge base for answering questions about our docs",
+      "expect": "Agent asks about vector store preference and whether action groups are needed. Uses Bedrock managed vector store, minimal IAM, no OpenSearch Serverless infrastructure",
+      "fail_if": "Agent deploys full OpenSearch Serverless collection with encryption/network policies, adds action groups with Lambda, or creates 100+ lines of infrastructure",
+      "baseline": "Without skill, agent creates full OpenSearch Serverless infrastructure (collection, encryption policy, network policy, data access policy), action group with Lambda, complex IAM roles, and 150+ lines of CDK"
+    }
+  ]
+}
