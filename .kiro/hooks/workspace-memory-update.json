@@ -4,11 +4,12 @@
     {
       "name": "Update Workspace Memory",
       "trigger": "Stop",
-      "description": "After each agent turn, update the workspace MEMORY.md using the workspace-memory skill — but only if this turn actually changed the project (structure, architecture, decisions, data models, contracts, or conventions). Skip on pure Q&A, reads, or trivial no-structural-impact edits.",
+      "description": "After each agent turn, update MEMORY.md using the workspace-memory skill — but ONLY if the current workspace root is registered in the skill's 'Projects Directories' allowlist, AND only if this turn actually changed the project. No-ops in unregistered directories and on pure Q&A/reads/trivial edits.",
       "action": {
         "type": "agent",
-        "prompt": "Review what changed in the turn that just completed. If this turn modified the project's structure, architecture, key decisions, data models, API contracts, build/run/test commands, or conventions, then update MEMORY.md at the workspace root using the workspace-memory skill: read the existing MEMORY.md (create it from the skill's skeleton if missing), update the affected sections in place, append to Key Decisions only for significant new decisions, and refresh the Last updated date. Keep it concise (under ~200 lines) and update in place — do not append a per-edit changelog. If the turn did not change the project (pure questions, explanations, reads, or trivial edits with no structural impact), do nothing and make no file changes."
-      }
+        "prompt": "Gate check first — this is mandatory and overrides everything else: open the workspace-memory skill (SKILL.md) and read the 'Projects Directories' allowlist between the BEGIN PROJECTS and END PROJECTS markers. Compare the current workspace root's absolute path against that list. If the current workspace root is NOT listed, STOP now: do nothing, make no file changes, do not read or create MEMORY.md. A silent no-op is the correct and expected outcome for unregistered directories. Only if the current workspace root IS listed, continue: review what changed in the turn that just completed, and if this turn modified the project's structure, architecture, key decisions, data models, API contracts, build/run/test commands, or conventions, then update MEMORY.md at the workspace root using the workspace-memory skill — read the existing MEMORY.md (create it from the skill's skeleton if missing), update the affected sections in place, append to Key Decisions only for significant new decisions, and refresh the Last updated date. Keep it concise (under ~200 lines) and update in place — do not append a per-edit changelog. If the turn did not change the project (pure questions, explanations, reads, or trivial edits with no structural impact), do nothing and make no file changes."
+      },
+      "enabled": true
     }
   ]
 }
